@@ -1,46 +1,85 @@
 # 🎬 Galaxy Cinema
 
-A full-stack web application for reserving cinema seats, managing showtimes, and booking movie tickets — built with a complete customer booking flow and a separate, secured Admin Dashboard.
+A full-stack cinema ticket booking and management web application that allows customers to browse movies, select showtimes, reserve seats, complete payments, and receive booking confirmations.
 
-<!-- Add a banner/screenshot here once you have one: -->
-<!-- ![Galaxy Cinema Banner](./docs/banner.png) -->
+The system also includes a secure and completely separated Admin Dashboard for managing movies, showtimes, bookings, users, and cinema-related data.
 
 ---
 
 ## ✨ Features
 
-- 🎟️ **Interactive seat reservation flow** — Movie → Showtime → Seat Selection → Checkout → Booking Confirmation
-- 🔐 **Separated User and Admin authentication** — Fully isolated login systems, roles, and sessions
-- 🎞️ **Dynamic movie & showtime management** — Full CRUD from the Admin Dashboard, reflected live on the customer site
-- 🧾 **Real-time seat availability** — Booked seats are locked per showtime and released automatically if payment fails
-- 💳 **Payment flow** — Order summary, price breakdown, and booking confirmation with a QR-coded e-ticket
-- 📊 **Admin analytics dashboard** — Total movies, bookings, users, revenue, and active shows at a glance
-- ✅ **Form validation & error handling** — Robust error handling throughout both customer and admin flows
-- 📱 **Fully responsive** — Dark, cinema-branded modern UI across desktop, tablet, and mobile
+### 🎟️ Customer Features
+- 🎬 Browse currently available movies
+- 🔎 Search and view movie details
+- 🕐 View available showtimes
+- 💺 Interactive seat selection
+- 🔒 Real-time seat availability per showtime
+- 🛒 Booking summary and price calculation
+- 💳 Secure payment flow
+- 🎫 Booking confirmation
+- 📱 QR-coded digital e-ticket
+- 📋 View booking history
+- ❌ Seats are not permanently reserved when payment fails
+- 📱 Fully responsive customer interface
 
----
+### 🔐 Authentication & Security
+- Separate Customer Login and Admin Login
+- JWT-based authentication
+- Role-based access control
+- Protected customer routes & protected admin routes
+- Separate customer and admin sessions
+- Cross-role login prevention
+- Generic invalid-credential messages
+- Admin dashboard is not publicly linked
+- Unauthorized users cannot access protected admin pages
+
+### 🛠️ Admin Dashboard
+- 📊 Dashboard overview (revenue, bookings, stats)
+- 🎞️ Movie management (full CRUD operations)
+- 🕐 Showtime management (full CRUD operations)
+- 🎟️ Booking management & live monitoring
+- 👥 Customer/user management
+- 🔄 Instant live updates reflected on the customer portal
+
 
 ## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite, Tailwind CSS
+- **Backend:** Node.js, Express.js (Alternative PHP backend included)
+- **Database:** MySQL
 
-| Layer | Technology |
-| :--- | :--- |
-| **Frontend** | React, Vite, Tailwind CSS |
-| **Backend** | Node.js, Express.js (or PHP backend) |
-| **Database** | MySQL |
-| **Auth** | JWT-based, role-separated sessions |
+---## ⚙️ Quick Setup
 
----
-
-## ⚙️ Local Setup Instructions
-
-### 1. Database Setup
-1. Open **XAMPP** and start Apache and MySQL.
-2. Go to **phpMyAdmin** and import the SQL file located in the `/database` folder.
+### 1. Database
+- Start **Apache** & **MySQL** in XAMPP.
+- Create a database named `galaxy_cinema` in phpMyAdmin and import `database/galaxy_cinema.sql`.
 
 ### 2. Backend Setup
 ```bash
 cd Backend
 npm install
 cp .env.example .env
-# Open .env and adjust your MySQL connection details
 npm run dev
+   cd Frontend
+npm install
+
+3. Frontend Setup
+cd Frontend
+npm install
+cp .env.example .env
+npm run dev
+
+Open http://localhost:5173 in your browser.
+
+🗺️ Booking Flow
+
+Movie ──▶ Showtime ──▶ Select Seats ──▶ Payment ──▶ QR E-Ticket
+
+👩‍💻 Author
+Damsarini
+
+Full-Stack Web Development Project
+
+📄 License
+This project is open for educational and portfolio evaluation purposes.
+
+
