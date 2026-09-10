@@ -45,7 +45,7 @@ The system also includes a secure and completely separated Admin Dashboard for m
 ## 🛠️ Technologies Used
 
 * **Frontend:** React.js,  CSS3 
-* **Backend:** Node.js, Express.js
+* **Backend:** Node.js, Express.js,PHP
 * **Database:** MySQL
 * **API Architecture:** RESTful API
 * **Authentication:** JWT
