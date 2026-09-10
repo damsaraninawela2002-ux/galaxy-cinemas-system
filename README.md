@@ -68,7 +68,8 @@ npm install
 cp .env.example .env
 npm run dev
 
-Open http://localhost:5173 in  browser.
+Open `http://localhost:5173` in the browser.
+
 
 🗺️ Booking Flow
 
