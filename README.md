@@ -43,11 +43,11 @@ The system also includes a secure and completely separated Admin Dashboard for m
 
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js, Vite, Tailwind CSS
-- **Backend:** Node.js, Express.js (Alternative PHP backend included)
+- **Frontend:** React.js,CSS
+- **Backend:** Node.js, Express.js 
 - **Database:** MySQL
 
----## ⚙️ Quick Setup
+ ⚙️ Quick Setup
 
 ### 1. Database
 - Start **Apache** & **MySQL** in XAMPP.
