@@ -42,38 +42,75 @@ The system also includes a secure and completely separated Admin Dashboard for m
 - 🔄 Instant live updates reflected on the customer portal
 
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js,CSS
-- **Backend:** Node.js, Express.js 
-- **Database:** MySQL
+## 🛠️ Technologies Used
 
- ⚙️ Quick Setup
+* **Frontend:** React.js,  CSS3 
+* **Backend:** Node.js, Express.js
+* **Database:** MySQL
+* **API Architecture:** RESTful API
+* **Authentication:** JWT
+* **Development Tools:** Visual Studio Code, XAMPP
 
-### 1. Database
-- Start **Apache** & **MySQL** in XAMPP.
-- Create a database named `galaxy_cinema` in phpMyAdmin and import `database/galaxy_cinema.sql`.
+---
 
-### 2. Backend Setup
-```bash
-cd Backend
-npm install
-cp .env.example .env
-npm run dev
-   cd Frontend
-npm install
-
-3. Frontend Setup
-cd Frontend
-npm install
-cp .env.example .env
-npm run dev
-
-Open `http://localhost:5173` in the browser.
-
+### 2. Database Setup
+1. Start Apache and MySQL via the **XAMPP Control Panel**.
+2. Navigate to phpMyAdmin (`http://localhost/phpmyadmin`).
+3. Create a new database named `galaxy_cinema`.
+4. Import the provided SQL database schema located at `database/galaxy_cinema.sql`.
 
 🗺️ Booking Flow
 
 Movie ──▶ Showtime ──▶ Select Seats ──▶ Payment ──▶ QR E-Ticket
+
+### 3. Backend Setup
+1. Open a terminal and navigate to the backend directory:
+   ```bash
+   cd Backend
+   Install the necessary packages:
+
+Bash
+npm install
+Set up the environment variables:
+
+Bash
+cp .env.example .env
+Update the .env file with your database credentials:
+
+Code snippet
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=galaxy_cinema
+JWT_SECRET=your_jwt_secret_key
+Start the backend server:
+
+Bash
+npm run dev
+Backend API will be active at http://localhost:5000.
+
+4. Frontend Setup
+Open a secondary terminal and navigate to the frontend directory:
+
+Bash
+cd Frontend
+Install the frontend dependencies:
+
+Bash
+npm install
+Create and configure the environment file:
+
+Bash
+cp .env.example .env
+Start the React development environment:
+
+Bash
+npm run dev
+
+Access the web application at http://localhost:5173.
+
+   
 
 👩‍💻 Author
 Damsarini
@@ -81,6 +118,6 @@ Damsarini
 Full-Stack Web Development Project
 
 📄 License
-This project is open for educational and portfolio evaluation purposes.
+This project is open for educational purposes.
 
 
